@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day</title>
+  <style>
+    body {
+      font-size: 14px;
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-image: url(https://wallpapershome.ru/images/wallpapers/den-svyatogo-valentina-3840x2160-14-fevralya-serdce-dekoracii-8483.jpg);
+    }
+    .postcard-container {
+      position: relative;
+      width: 80vw;
+      height: 80vh;
+    }
+    .heart {
+  animation: heartbeat 1.3s infinite;
+  background-color: red;
+  display: inline-block;
+  height: 150px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  position: absolute; 
+  left: 45%; top: 45%;
+  width: 150px;
+  content:"NATALI";
+}
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 150px;
+  position: absolute;
+  width: 150px;
+}
+
+.heart:before {
+  top: -70px;
+  left: 0;
+}
+
+.heart:after {
+  left: 70px;
+  top: 0;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( 1 )
+      rotate(-45deg);    
+  }
+  20%
+  {
+    transform: scale( 1.25 )
+      rotate(-45deg);  
+  }
+   40%
+  {
+    transform: scale( 1.5 )
+      rotate(-45deg);
+  }
+}
+    .postcard-foreground {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url(https://i.gifer.com/XiPk.gif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: all linear 1.8s;
+    }
+    .opened {
+      opacity: 0.0;
+      transform: rotate(20deg)
+                translate(-25%, -25%);
+    }
+    .text {
+      position: absolute;
+  bottom: 0;
+  right: 0;
+}
+  </style>
+</head>
+<body>
+  <div class="postcard-container">
+    <div class="heart"></div>
+    <div class="postcard-foreground"></div>
+    <div class="Text">Happy St.Valentine's Day!!!</div>
+  </div>
+  <script>
+    const openedCssClass = "opened"
+    const postcardBg = document.querySelector(".heart");
+    const postcardFg = document.querySelector(".postcard-foreground");
+    postcardBg.onclick = () => {
+      postcardFg.classList.remove(openedCssClass)
+    }
+    postcardFg.onclick = () => {
+      if (postcardFg.classList.contains(openedCssClass)) {
+        postcardFg.classList.remove(openedCssClass)
+      } else {
+        postcardFg.classList.add(openedCssClass)
+      }
+    };
+  </script>
+</body>
+</html>
