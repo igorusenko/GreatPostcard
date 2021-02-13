@@ -14,7 +14,7 @@
       align-items: center;
       width: 100%;
       height: 100%;
-      background-image: url(https://wallpapershome.ru/images/wallpapers/den-svyatogo-valentina-3840x2160-14-fevralya-serdce-dekoracii-8483.jpg);
+      background-image: url(https://media2.giphy.com/media/3o752k5H19mo1pnpkc/source.gif);
     }
     .postcard-container {
       position: relative;
@@ -22,7 +22,7 @@
       height: 80vh;
     }
     .heart {
-  animation: heartbeat 1.3s infinite;
+  animation: heartbeat 1.02s infinite;
   background-color: red;
   display: inline-block;
   height: 150px;
@@ -77,7 +77,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image: url(https://i.gifer.com/XiPk.gif);
+      background-image: url(https://media3.giphy.com/media/w6yLldAO2s0icXuUdp/source.gif);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -88,18 +88,19 @@
       transform: rotate(20deg)
                 translate(-25%, -25%);
     }
-    .text {
-      position: absolute;
-  bottom: 0;
-  right: 0;
+   
 }
   </style>
 </head>
 <body>
+  
   <div class="postcard-container">
     <div class="heart"></div>
     <div class="postcard-foreground"></div>
-    <div class="Text">Happy St.Valentine's Day!!!</div>
+    
+    <audio autoplay controls>
+      <source src="audio/music.ogg"  type="audio/ogg; codecs=vorbis">
+      <source src="1.mp3" type="audio/mpeg">
   </div>
   <script>
     const openedCssClass = "opened"
